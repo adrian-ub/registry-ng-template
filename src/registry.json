@@ -1,0 +1,52 @@
+{
+  "$schema": "https://ui.adrianub.dev/schema/registry.json",
+  "name": "acme",
+  "homepage": "https://acme.com",
+  "items": [
+    {
+      "name": "hello-world",
+      "type": "registry:component",
+      "title": "Hello World",
+      "description": "A simple hello world component",
+      "files": [
+        {
+          "path": "registry/hello-world/hello-world.ts",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "complex-component",
+      "type": "registry:component",
+      "title": "Complex Component",
+      "description": "A complex component showing services, libs and components.",
+      "dependencies": ["zod"],
+      "registryDependencies": [
+        "card"
+      ],
+      "files": [
+        {
+          "path": "registry/complex-component/page.ts",
+          "type": "registry:page",
+          "target": "app/pages/pokemon/page.ts"
+        },
+        {
+          "path": "registry/complex-component/components/pokemon-card.ts",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/complex-component/components/pokemon-image.ts",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/complex-component/lib/pokemon-image.pipe.ts",
+          "type": "registry:lib"
+        },
+        {
+          "path": "registry/complex-component/services/pokemon.service.ts",
+          "type": "registry:service"
+        }
+      ]
+    }
+  ]
+}
